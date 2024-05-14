@@ -4,13 +4,13 @@ import java.io.*;
 
 public class FileServiceImpl extends FileService {
 
-    private String path = "src/task1/test.txt";
+    private final String PATH = "src/task1/test.txt";
 
     @Override
     String findLongestWord() {
         String longestWord = "";
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(path));
+            BufferedReader reader = new BufferedReader(new FileReader(PATH));
             String line;
 
             while ((line = reader.readLine()) != null){
@@ -30,7 +30,7 @@ public class FileServiceImpl extends FileService {
     @Override
     void add(String line) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(path, true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(PATH, true));
             writer.write(line);
             writer.close();
         } catch (IOException e) {
