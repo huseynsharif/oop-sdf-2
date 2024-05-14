@@ -1,0 +1,5 @@
+salam
+oop
+huseyn
+javascript
+java
