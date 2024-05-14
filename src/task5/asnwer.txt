@@ -1,0 +1,8 @@
+Əvvəlcə main metodunda name = Test və age = 23 olan instance yaradılır. Heap-də yerini tutur. Buna Person@1 deyək.
+Stack-də person dəyişəni Person@1 instance-ın referansını tutur.
+
+test metodu çağırılanda testin içindəki person dəyişəni Heap-dəki Person@1-in referansını tutur. Yəni Heap dəyişmir. Sadəcə Stackdə dəyişən əlavə olunur.
+Sonra test metodu Heap-dəki Person@1-in age-ini 25 edir. Stack dəyişmir.
+person = new Person("Test", 23); burada Heap-də Person@2 yaradılır. Və stackdəki testin personu Person@2 referansını tutur.
+sonra Person@2-in name i test2 edilir.
+sonra return person.age ediləndə stackdə testin içindəki person qaldırılır.
